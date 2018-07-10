@@ -1,0 +1,248 @@
+id: "basic"
+label: "basic"
+version: "1.0.0"
+author_link: "https://actvision.movabletype.io/"
+author_name: "動画（映像）・Web（ホームページ）・印刷物の制作会社｜アクトビジョン（つくば市）"
+description: "basic"
+class: "blog"
+elements:
+  blog_static_files:
+    component: ~
+    data:
+      - bootstrap
+      - css
+      - images
+      - js
+    importer: blog_static_files
+  custom_fields:
+    component: commercial
+    data:
+      PageTitleEn:
+        default: ''
+        description: ''
+        name: ページタイトル（英語）
+        obj_type: page
+        options: ''
+        required: 0
+        type: text
+      entry_pickup:
+        default: 0
+        description: メインページ中央のPICKUP オススメ部分に表示する場合にチェックを入れます。
+        name: ピックアップ
+        obj_type: post
+        options: ''
+        required: 0
+        type: checkbox
+      folder_top:
+        default: 0
+        description: ''
+        name: パンくず表示（Webページ）
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      folder_top_entry:
+        default: 0
+        description: パンくずに表示するときは１。
+        name: パンくず表示（記事）
+        obj_type: post
+        options: ''
+        required: 0
+        type: checkbox
+      footernavi_on:
+        default: 0
+        description: フッターメニューに表示する場合にチェックを入れます。
+        name: フッターメニューに表示
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      imageposition:
+        default: ''
+        description: ''
+        name: メインイメージの配置
+        obj_type: page
+        options: 上に配置,下に配置,背景全体に配置
+        required: 0
+        type: radio
+      logo_images:
+        default: ''
+        description: メインイメージ上に表示されるタイトルロゴの画像をアップロードします。
+        name: ロゴ画像
+        obj_type: blog
+        options: ''
+        required: 0
+        type: asset_image
+      main_image_entry:
+        default: ''
+        description: 記事のサムネイルやog:imageとして表示させる画像です。
+        name: メインイメージ
+        obj_type: post
+        options: ''
+        required: 0
+        type: asset_image
+      main_image_page:
+        default: ''
+        description: ウェブページのサムネイルやog:imageとして表示させる画像です。
+        name: メインイメージ（ウェブページ）
+        obj_type: page
+        options: ''
+        required: 0
+        type: asset_image
+      main_images:
+        default: ''
+        description: "背景になる画像をアップロードします。\r\n全面に表示されるため、大きなサイズの画像がオススメです。"
+        name: メインイメージ
+        obj_type: blog
+        options: ''
+        required: 0
+        type: asset_image
+      navi_on:
+        default: 0
+        description: グローバルナビに表示する場合にチェックを入れます。
+        name: グローバルナビに表示
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      news_image:
+        default: ''
+        description: 記事リストに載せるサムネイルをアップロードします。
+        name: 記事サムネイル画像
+        obj_type: post
+        options: ''
+        required: 0
+        type: asset_image
+      pageimage:
+        default: ''
+        description: メインイメージの各ブロックに表示する画像です。（横幅は1280px程度を推奨）
+        name: メインイメージ
+        obj_type: page
+        options: ''
+        required: 0
+        type: asset_image
+      webpage_top:
+        default: 0
+        description: メインページに表示するウェブページを指定します
+        name: メインページに表示（ウェブページ）
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+    importer: custom_fields
+  field_display_options:
+    component: ~
+    data:
+      blog:
+        field:main_images:
+          display: default
+          order: 0
+      page:
+        excerpt:
+          display: default
+          order: 1
+        keywords:
+          display: default
+          order: 2
+        text:
+          display: default
+          order: 0
+      post:
+        excerpt:
+          display: default
+          order: 1
+        keywords:
+          display: default
+          order: 2
+        text:
+          display: default
+          order: 0
+    importer: field_display_options
+  template_set:
+    component: core
+    data:
+      base_path: templates
+      templates:
+        archive:
+          category_entry_listing:
+            filename: category_entry_listing.mtml
+            label: カテゴリ別記事リスト
+            mappings:
+              category:
+                archive_type: Category
+                file_template: "%-c/%i"
+                preferred: 1
+          yearly_entry_listing:
+            filename: yearly_entry_listing.mtml
+            label: 年別ブログ記事リスト
+            mappings:
+              yearly:
+                archive_type: Yearly
+                file_template: "%y/%i"
+                preferred: 1
+                start_month: 1
+        index:
+          entrylist:
+            filename: news.html.mtml
+            label: ニュース一覧
+            outfile: news.html
+            rebuild_me: 1
+          main_index:
+            filename: index.html.mtml
+            label: メインページ
+            outfile: index.html
+            rebuild_me: 1
+          styles:
+            filename: styles.css.mtml
+            label: スタイルシート
+            outfile: styles.css
+            rebuild_me: 1
+        individual:
+          entry:
+            filename: entry.mtml
+            label: 記事
+            mappings:
+              individual:
+                archive_type: Individual
+                file_template: "%y/%m/%-f"
+                preferred: 1
+        module:
+          archive_list:
+            filename: archive_list.mtml
+            label: archive_list
+          breadcrumbs:
+            filename: breadcrumbs.mtml
+            label: breadcrumbs
+          common_bottom_js:
+            filename: common_bottom_js.mtml
+            label: common_bottom_js
+          common_stylesheet:
+            filename: common_stylesheet.mtml
+            label: common_stylesheet
+          config:
+            filename: config.mtml
+            label: config
+          footer:
+            filename: footer.mtml
+            label: footer
+          gototop:
+            filename: gototop.mtml
+            label: gototop
+          header:
+            filename: header.mtml
+            label: header
+        page:
+          webpage:
+            filename: webpage.mtml
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
+        system:
+          404_error:
+            filename: 404_error.mtml
+            label: 404 エラー
+    importer: template_set
+

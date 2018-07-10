@@ -1,0 +1,94 @@
+#main_image{background-size: cover; position: relative; overflow: hidden; padding-top: 0; border-top: none;}
+#main_image img {
+    z-index: 2;
+    position: absolute;
+    top: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+	max-width: 100%;
+    height: auto;
+	padding: 15px;
+}
+#main_image video {
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+}
+#main_image .pattern {
+    width: 100%;
+    height: 100%;
+    background: url(/images/index/borderbg.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contents h2{}
+#contents h3{font-family:'Noto Sans Japanese' !important; padding: .5rem .75rem; background-color: #efefef !important;; border-bottom: 1px #000 solid !important;; border-right: 1px #000 solid !important;;}
+#concept p{line-height: 3;}
+.ttl_business {text-align: center;}
+.ttl_business h3 a{display: block; cursor: pointer; color: #333;}
+
+
+/*==================================================
+=            Bootstrap 3 メディア・クエリ             =
+==================================================*/
+
+/*==========  モバイル・ファーストの場合  ==========*/
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (min-width : 320px) {
+}
+
+/* XSサイズ : Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}
+
+
+/*==========  非モバイル・ファーストの場合  ==========*/
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    #main_image{max-height: 12rem; min-height: 12rem; background-image:url(/images/index/TOPmovie.gif);}
+	#main_image img {max-width: 60%;}
+	.layerTransparent{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+	#bgvid {display: none;}
+	#concept p{font-size: 11px;}
+}
+
+/* XSサイズ : Extra Small Devices, Phones */  
+@media only screen and (max-width : 480px) {
+	#main_image{min-height: 10rem;}
+	#main_image img {max-width: 90%;}
+}
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (max-width : 320px) {
+	#concept p{font-size: 10px;}
+}

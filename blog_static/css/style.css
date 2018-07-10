@@ -1,0 +1,447 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.4
+2009-07-27
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+body {
+	line-height:1;
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	display:block;
+}
+
+nav ul {
+	list-style:none;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+
+a {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+
+mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom:1px dotted #000;
+	cursor:help;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+.clear{clear:both}
+
+/* images */
+.aligncenter, .attachment-post-thumbnail{display:block;margin:0 auto;}
+.alignright{float:right;margin-left:1.875rem;}
+.alignleft{float:left;margin-right:1.875rem;}
+.alignright, .alignleft, .aligncenter{margin-bottom:1.875rem;}
+div.alignright, div.alignleft, div.aligncenter{text-align:center;}
+.entry-content img{max-width:100%;height:auto;}
+.entry-content img.frame{padding:3px;border:1px #e8e8e8 solid;}
+img.attachment-thumbnail{display:block;float:left;margin-bottom:1rem;margin-right:1.4em;}
+.wp-caption{max-width:100%;height:auto;}
+.wp-caption-text{text-align:center;margin-top:0;font-size:90%;}
+img.radius{border-radius:50%;}
+#contents img{max-width: 100%; height: auto;}
+#contents hr{margin:6px 0 !important;}
+#contents hr.break{height:1px;margin:.5rem 0 !important;border-top:none;border-right:none;border-bottom:1px solid transparent;border-left:none;}
+#contents hr.dotted{height:1px;margin:.5rem 0 !important;border-top:none;border-right:none;border-bottom:1px dotted #ddd;border-left:none;}
+/* images */
+
+html{font-size:13px;}
+body{font-family:'Noto Sans Japanese' !important; background-color:#fff; color:#333;}
+
+/* bootstrap */
+.no-gutter > [class*='col-'] { padding-right:0; padding-left:0; }
+
+/* loader */
+#loader {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  z-index: 10000;
+}
+#wrap {
+ 	transition: 4s;
+	-vendor-animation-duration: 15s;
+	-vendor-animation-delay: 1s;
+	-vendor-animation-iteration-count: infinite;
+}
+
+.circle { 
+	width: 300px;
+	height: 300px;
+	border: #c4c4c4 1px solid;
+	border-radius: 50%;
+	position: relative;
+	background: url(../images/logo_s.png) no-repeat center center;
+ 	margin-top: -150px;
+	margin-left: -150px;
+ 	top: 50%;
+	left: 50%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+	.circle {
+		background: url(../images/logo_s@2x.png) no-repeat center center;
+		background-size: 40%;
+	}
+}
+
+.common {
+  width: 50%; 
+  height: 50%;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+	animation: rotate 60s linear infinite;
+  text-align: center;
+	background-color: #fff;
+	display: table;
+}
+
+.common span{ font-size: 0.8rem; font-weight: normal; display: block; line-height: 2;}
+
+
+.top {
+	position: absolute;
+	left: 25%;
+	top: -25%;
+	transform-origin: center 150%;
+}
+
+.right {
+  position: absolute;
+  left: 75%;
+  top: 25%;
+  transform-origin: -50% center;
+}
+
+.bottom {
+  position: absolute;
+  left: 25%;
+  top: 75%;
+  transform-origin: center -50%;
+}
+
+.left {
+  position: absolute;
+  left: -25%;
+  top: 25%;
+  transform-origin: 150% center;
+}
+
+.content {
+	width: 100%; 
+	height: 100%;
+ 	animation: rotate 60s linear reverse infinite;
+	word-wrap: break-word;
+	border: #c4c4c4 1px solid;
+	border-radius: 50%;
+	background-color: transparent;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif !important;
+}
+
+@keyframes rotate { 
+  0% {
+   transform: rotate(0deg);
+  }
+    100% {  
+    transform: rotate(360deg);
+  }
+}
+
+/*  header */
+#header h1{display: block;}
+#logo, #telinfo, #tel, #mail{height:2.5rem; vertical-align: middle;}
+#headwrap{padding-top:1.25rem;padding-bottom:1.25rem;}
+#telinfo{font-size:0.75em; line-height:1.5; text-align: right;}
+#telinfo span{font-size:0.625em;}
+#tel{padding: .4rem 0; font-size:1.5rem; text-align: center;}
+#tel a{color: #333; text-decoration: none;}
+#mail a {font-size:0.75em; display:block; background-color:#999; text-align:center; color:#fff; text-decoration:none; padding: .75rem .5rem; border-radius: 0.25rem;}
+#mail a:hover{
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all  0.8s ease;
+}
+
+/* nav */
+#gnav{background-color: #fff; width: 100%; border-bottom: #efefef 1px solid;}
+#gnav ul{list-style-type: none; display: table; line-height: 1.5; width: 100%; margin-bottom: 0;}
+#gnav li{background-color: #fff; color: #333; display:table-cell; text-align: center; width: 16.6%; padding-top: .75rem; padding-bottom: .75rem;}
+#gnav a::after{content: "|"; float: right; color: #ccc; font-weight: 100;}
+#gnav a.last::after{content: "";}
+#gnav a{color: #333; text-decoration: none; display: block;}
+#gnav a:hover{text-decoration: underline}
+.fixed { position: fixed; top: 0; z-index: 99;}
+
+/* breadcrumb */
+.breadcrumb{background-color: #fff !important; margin-bottom: 0 !important; font-size: 0.75rem; border-radius: 0 !important;}
+
+/* contents */
+#contents{line-height: 1.8;}
+#contents h1, #contents h2, #contents h3, #contents h4, #contents h5, #contents h6{line-height: 1.6; font-weight: normal;}
+#contents h1, #contents h2, #contents h3, #contents h4 {clear: both;}
+#contents h1{}
+#contents h2{font-family: "Sawarabi Mincho"; font-size: 1.6rem; position: relative; text-align: center; margin-bottom: 1rem;}
+#contents h3{font-family: "Sawarabi Mincho"; font-size: 1.4rem; margin-bottom: 1rem;}
+#contents h4{font-size: 1.2rem; margin-bottom: 1rem;}
+#contents h5{font-size: 1.15rem; margin-bottom: 1rem;}
+#contents h6{font-size: 1.1rem; margin-bottom: 1rem;}
+#contents p {line-height: 1.8; margin-bottom: 1rem;}
+#contents ul, #contents ol{list-style-position: outside; padding-left: 20px;}
+#contents .font-l{font-size:2rem; line-height: 1.6; text-align: center; margin-bottom: 2rem;}
+#contents table th, #contents table td{line-height: 1.8;}
+br.xs{display: none;}
+
+h2.panel-title,h3.panel-title,h4.panel-title,h5.panel-title,h6.panel-title{margin-bottom:0 !important;} 
+
+ /* main_image */
+#main_image{border-top: #efefef 1px solid; text-align: center; margin-bottom: 2rem; background-repeat: no-repeat; background-position: center top; min-height: 6rem; max-height: 38rem; background-size: cover; /*background-image: url(../images/main_p.png);*/ padding-top: 2rem; font-size: 2.5rem; color:#333; line-height: 1.4;}
+#main_image img{margin-left: auto; margin-right: auto; display: block; vertical-align: middle;}
+#main_image span{font-size: 0.9rem; font-weight: 500; display: block;}
+
+ /* concept */
+#concept{text-align: center; font-family: "Sawarabi Mincho"; padding-bottom: 2rem;}
+#concept p{line-height: 2; font-size: 14px;}
+
+/* response */
+#response{background-color: #efefef; padding-top: 2.5rem; padding-bottom: 2.5rem; margin-top: 2.5rem; line-height: 1.8;}
+#response #message{margin-bottom: 1.5rem;}
+#res_tel {text-align: right;}
+#res_tel span{font-size: 1.2rem;}
+#res_tel a{color: #333; text-decoration: none;}
+span.res_form{font-size: .75rem; line-height: 1.5; font-weight: normal; padding-top: 0.5rem}
+a#res_mail {font-size:1rem; display:block; background-color:#999; text-align:center; color:#fff; text-decoration:none; padding: .75rem .5rem; border-radius: 0.25rem;}
+a#res_mail:hover{
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all  0.8s ease;
+}
+
+/* footer */
+#footer{padding-top: 1.5rem; padding-bottom: 2.5rem; line-height: 1.8;}
+#footer a{color: #333;}
+#ftr_logo{margin-bottom: .75rem;}
+#ftr_nav{list-style-type: none; font-size: .8rem;}
+#ftr_nav li{display: inline; padding-left: 0.75rem; padding-right: 0.75rem; border-right: 1px solid #ccc; height: 1rem;}
+#ftr_nav li:last-child{padding-right: 0; border-right: none;}
+#copyright{margin-top: 3rem; font-size: .75rem; clear: both;}
+#copyright span{vertical-align: text-bottom;}
+#ftr_nav, #copyright{text-align: right;}
+.ftr_info img{display: block;}
+
+/* topbtn */
+#top_btn {position: fixed; right: 1.5rem; bottom: 1.5rem; z-index: 100; font-size: 4rem;}
+#top_btn a {color: #e60012; text-decoration: none;}
+
+/* YouTube -> respnsive */
+.YoutubeWrapper{
+　position: relative ;
+　margin-top: 1.2rem ;
+　margin-bottom: 1.2em ;
+　padding-top: 69px ;
+　padding-bottom: 50% ;
+　overflow: hidden ;
+}
+ 
+.YoutubeWrapper iframe {
+　position: absolute ;
+　top: 0 ;
+　left: 0 ;
+　height: 100% ;
+　width: 100% ;
+}
+
+/*==================================================
+=            Bootstrap 3 メディア・クエリ             =
+==================================================*/
+
+/*==========  モバイル・ファーストの場合  ==========*/
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (min-width : 320px) {
+}
+
+/* XSサイズ : Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	#gnav ul li br{display: none;}
+	#gnav ul li i{padding-right: 0.5rem;}
+}
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.container {width: 1200px !important;}
+}
+
+
+/*==========  非モバイル・ファーストの場合  ==========*/
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	#main_image{max-height: 33rem;}
+/*  header */
+	#tel{font-size:1rem;}
+	#contents h2.font-l{font-size: 3rem;}
+	#mail a {font-size:0.625em;}
+	#footer{font-size: 0.75rem;}
+	#copyright{margin-top: 2.5rem;}
+	.res_ico{height: 8.1875rem; font-size: 4rem;}
+	.res_text {padding-top: 1rem; padding-bottom: 1rem;}
+	.res_text span{font-size: 2.5rem;}
+	span.res_form{font-size: 0.75rem;}
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	#main_image{max-height: 25rem;}
+	.img-rounded,.img-circle,.img-thumbnail,.alignright,.alignleft{float:none;margin-left:auto;margin-right:auto;display:block;max-width:280px;text-align:center;}
+	h2.font-l{font-size: 1.5rem;}
+	#tel{text-align: right;}
+	/* nav */
+	#gnav{font-size: 0.875rem;}
+	.ftr_info,#ftr_nav, #copyright{text-align: center;}
+	.res_ico{height: 5.9375rem; font-size: 3rem;}
+	.res_text{font-size: 0.75rem;}
+	#ftr_nav{display: none;}
+	#copyright{margin-top: 0;}
+	.res_text span{font-size: 2rem;}
+	span.res_form{font-size: 0.5rem;}
+	a#res_mail {font-size:0.875rem;}
+	.ftr_info img{text-align: center; margin-left: auto; margin-right: auto;}
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.circle { 
+	width: 216px;
+	height: 216px;
+ 	margin-top: -108px;
+	margin-left: -108px;
+	}
+	.content {
+	width: 100%; 
+	height: 100%;
+	}
+	.common span{padding-bottom: 0.5rem; line-height: 1;}
+	#tel{text-align: center;}
+	#contents .font-l{font-size:1.2rem;}
+	/* nav */
+	#gnav{font-size: 10px;}
+	#gnav i{font-size: 1.2rem;}
+	#headwrap{padding-top: 1rem; padding-bottom: 0;}
+	#toptext{height:0.25rem; padding: 0;}
+	#tel{font-size:1.25rem; margin-top: 1.0rem;}
+	#logo, #tel{text-align: center;}
+	.res_ico{height: 4.875rem; font-size: 3rem; background-color: inherit; border-radius: 0%; border: none;}
+	.res_text{padding-top: 0.5rem; padding-bottom: 0.5rem;}
+	#response #message{font-size: 1.2rem; margin-bottom: 1rem;}
+	#response{padding-top: 1.5rem; padding-bottom: 1.5rem;}
+	#response #message{text-align: center;}
+	#res_tel {text-align: center;}
+	br.xs{display: block;}
+}
+
+/* XSサイズ : Extra Small Devices, Phones */  
+@media only screen and (max-width : 480px) {
+	html{font-size:12px;}
+}
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (max-width : 320px) {
+	.circle { 
+		width: 184px;
+		height: 184px;
+ 		margin-top: -92px;
+		margin-left: -92px;
+  background-size: 40%;
+	}
+	#concept p{line-height: 3; font-size: 13px;}
+}
