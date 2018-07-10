@@ -30,7 +30,9 @@
 <$mt:Include module="common_stylesheet"$>
 <mt:SetVarBlock name="FolderBasename"><$mt:FolderBasename$></MTSetVarBlock>
 <mt:If name="FolderBasename" eq="web">
-  <link rel="stylesheet" href="<$mt:BlogURL$>css/web.css">
+<link rel="stylesheet" href="<$mt:BlogURL$>css/web.css">
+<mt:ElseIf name="FolderBasename" eq="movie">
+<link rel="stylesheet" href="<$mt:BlogURL$>css/movie.css">
 </mt:If>
 </head>
 <body>
