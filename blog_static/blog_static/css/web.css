@@ -1,0 +1,63 @@
+#main_image{max-height: 12rem;}
+.works{padding-bottom: 2rem; opacity: 0;}
+.works img{border: 1px #efefef solid;}
+
+
+/*==================================================
+=            Bootstrap 3 メディア・クエリ             =
+==================================================*/
+
+/*==========  モバイル・ファーストの場合  ==========*/
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (min-width : 320px) {
+}
+
+/* XSサイズ : Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+/*==========  非モバイル・ファーストの場合  ==========*/
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	#appeal ul li {font-size: 1.3rem;}
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	#appeal ul li {font-size: 1rem;}
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+#appeal ul li{font-size: 1rem;}
+#appeal ul li i{padding-right: 0.4rem;}
+	img#illust{margin-top: 1rem;}
+}
+
+/* XSサイズ : Extra Small Devices, Phones */  
+@media only screen and (max-width : 480px) {
+
+}
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (max-width : 320px) {
+    
+}

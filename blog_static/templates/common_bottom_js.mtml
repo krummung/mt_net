@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.0/js/smooth-scroll.min.js"></script>
+<script src="<$mt:BlogRelativeURL$>js/common.js"></script>
+<script src="<$mt:BlogURL$>bootstrap/js/bootstrap.min.js"></script>
+<script src="<$mt:BlogURL$>js/anijs-min.js"></script>
+<script src="<$mt:BlogURL$>js/jquery.inview.min.js"></script>
+
+<script type="text/javascript" >
+    $('#main_image>.row').addClass('animated fadeInUp');
+
+<mt:If name="FolderBasename" eq="web">
+    $('.works').on('inview', function(event, isInView) {
+<mt:ElseIf name="FolderBasename" eq="movie">
+    $('.movie_sample').on('inview', function(event, isInView) {
+</mt:If>
+        if( isInView ) {
+            $(this).addClass('fadeIn');
+            $(this).css('opacity',1);
+        }
+        else {
+            $(this).removeClass('fadeIn');
+            $(this).css('opacity',0);
+        }
+    });
+</script>

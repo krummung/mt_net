@@ -1,0 +1,57 @@
+#main_image{max-height: 12rem;}
+.works{opacity: 0;}
+
+/*==================================================
+=            Bootstrap 3 メディア・クエリ             =
+==================================================*/
+
+/*==========  モバイル・ファーストの場合  ==========*/
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (min-width : 320px) {
+}
+
+/* XSサイズ : Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+/*==========  非モバイル・ファーストの場合  ==========*/
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+.movie_wrapper{padding: 20px 0;}
+}
+
+/* XSサイズ : Extra Small Devices, Phones */  
+@media only screen and (max-width : 480px) {
+
+}
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (max-width : 320px) {
+    
+}

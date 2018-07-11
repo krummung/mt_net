@@ -1,0 +1,131 @@
+<!DOCTYPE html><$mt:Include module="config" strip_linefeeds="1"$>
+<html lang="<$mt:BlogLanguage$>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<$mt:PublishCharset$>">
+<title><$mt:BlogName encode_html="1"$></title>
+<meta name="description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+<meta name="keywords" content="<$mt:GetVar name="meta_keywords"$>">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="<$mt:BlogURL encode_html="1"$>images/favicon.ico">
+<link rel="start" href="<$mt:BlogURL encode_html="1"$>">
+<$mt:CanonicalLink$>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><$mt:Var name="blog_lang"$></mt:If>">
+<meta property="og:title" content="<$mt:BlogName encode_html="1"$>">
+<meta property="og:url" content="<$mt:BlogURL encode_html="1"$>">
+<meta property="og:description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+<meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
+<meta property="og:image" content="<$mt:BlogURL encode_html="1"$>images/ogimage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@<$mt:Var name='twitterVia'$>">
+<meta name="twitter:title" content="<$mt:BlogName encode_html="1"$>">
+<meta name="twitter:description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+<meta name="twitter:image" content="<$mt:BlogURL encode_html="1"$>images/ogimage.jpg">
+<!-- Microdata -->
+<meta itemprop="description" content="<$mt:BlogDescription remove_html="1" encode_html="1"$>">
+<link itemprop="url" href="<$mt:BlogURL encode_html="1"$>">
+<link itemprop="image" href="<$mt:BlogURL encode_html="1"$>images/ogimage.jpg">
+<$mt:Include module="common_stylesheet"$>
+<link rel="stylesheet" href="<$mt:BlogURL$>css/index.css">
+</head>
+
+<body>
+<div id="loader">
+	<div class="circle">
+		<div class="common top">
+			<div class="content"><span>designing</span>デザイン</div>
+		</div>
+		<div class="common right">
+			<div class="content"><span>video production</span>映像制作</div>
+		</div>
+		<div class="common bottom">
+			<div class="content"><span>web production</span>Web制作</div>
+		</div>
+		<div class="common left">
+			<div class="content"><span>pamphlet</span>パンフレット</div>
+		</div>
+	</div>
+</div>
+<$mt:Include module="header"$>
+
+<section id="contents">
+<div id="main_image" class="container-fluid clearfix">
+  	<div class="row">
+		<div class="pattern"></div>
+   		<div class="layerTransparent">
+		<video autoplay loop poster="<$mt:BlogURL$>images/index/TOPmovie.gif" id="bgvid"><source src="<$mt:BlogURL$>images/index/TOPmovie.mp4" type="video/mp4"></video>
+		</div>
+   	</div>
+</div>
+
+<div class="container clearfix"><div class="row">
+
+	<div class="col-sm-12" id="concept">
+		<h2>CONCEPT</h2>
+		<p>アクトビジョンは、茨城県つくば市にある制作会社です。<br>
+		Web、映像、パンフレットを中心に<br>
+		プロモーションのお手伝いをしています。<br>
+		制作の進行上、重要な役割を担うクリエイティブディレクター。<br>
+		小社には個々に実績と技術を備えたスタッフが在籍しています。<br>
+		そして私たちの使命は、お客様のさらなる可能性を見出し、<br>
+		コンテンツを通じ、その先に広がる物語を描くことと考えます。<br>
+		アクトは「行動」、ビジョンは「将来への展望」を意味します。<br>
+		未来を描くためのアプローチを斬新なアイデアと<br>
+		より効果的な手法でカタチにしていきます。</p>
+	</div>
+	
+	
+	<div class="col-sm-4 col-sm-12 ttl_business">
+		<h3><a href="<$mt:BlogURL$>web/">Web制作</a></h3>
+		<p>企業サイトやECサイト、ブログなど幅広く対応可能！</p>
+	</div>
+	
+	<div class="col-sm-4 col-sm-12 ttl_business">
+		<h3><a href="<$mt:BlogURL$>movie/">映像制作</a></h3>
+		<p>企画・シナリオから「伝わる映像」をご提案します！</p>
+	</div>
+	
+	<div class="col-sm-4 col-sm-12 ttl_business">
+		<h3><a href="<$mt:BlogURL$>pamphlet/">パンフレット</a></h3>
+		<p>オーダーメイドのオリジナルデザイン！</p>
+	</div>
+</div></div>
+</section>
+
+<$mt:Include module="footer"$>
+<$mt:Include module="common_bottom_js"$>
+<$mt:Include module="gototop"$>
+<script>
+	$(function() {
+	  var h = $(window).height();
+	  $('#wrap').css('display','none');
+	  $('#loader').height(h).css('display','block');
+	});
+	 
+	$(window).load(function () { //全ての読み込みが完了したら実行
+		$('#loader').delay(900).fadeOut(800);
+		//$('#wrap').css('display', 'block');
+		$("#wrap").delay(600).fadeIn(800);
+		$('#wrap').addClass('animated fadeInUp');
+	});
+	 
+	//10秒たったら強制的にロード画面を非表示
+	$(function(){
+	  setTimeout('stopload()',10000);
+	});
+	 
+	function stopload(){
+		$('#loader').delay(900).fadeOut(800);
+		//$('#wrap').css('display','block');
+		$("#wrap").delay(600).fadeIn(800);
+		$('#wrap').addClass('animated fadeInUp');
+	}
+	</script>
+	<script type="text/javascript" >
+		$('#main_image>.row').addClass('animated fadeInUp');
+		$('.font-l').addClass('animated fadeIn');
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+h1{font-size: 0.8rem; font-weight: normal;}
+.ftr_info,#ftr_nav, #copyright{text-align: center;}
+#ftr_nav{display: none;}
+#copyright{margin-top: 0;}
+.ftr_info img{text-align: center; margin-left: auto; margin-right: auto;}
+
+/* header */
+#headwrap{text-align: center;}
+#headwrap img{display: block; text-align: center; margin-right: auto; margin-left: auto;}
+
+/* contents */
+
+
+/* response */
+#response{text-align: center;padding-top: 1rem; padding-bottom: 0;}
+#response #message { margin-bottom: 0!important;}
+#res_text{padding-top: 1rem; padding-bottom: 1rem; line-height: 1.5;}
+#res_text span{font-size: 3.25rem; font-weight: 900; margin-top: -0.25rem; display: block;}
+#res_text span a{color: #333; text-decoration: none;}
+
+/* footer */
+#footer{text-align: center;}
+#copyright{text-align: center;}
+.ftr_info img{display: block;}
+#ftr_logo img{display: block; text-align: center; margin-right: auto; margin-left: auto;}
+
+#frm_inquiry{margin-top: 1rem;  line-height: 2;}
+#frm_inquiry .row{padding-bottom: 1.5rem; padding-top: 1.5rem; border-bottom: 1px solid #ddd;}
+.title{font-weight: 700; line-height: 1.5; padding-bottom: 0.5rem;}
+
+#buttons{text-align: center; padding-top: 2rem;}
+#buttons input[type="button"]{margin-bottom: 1rem;}
+.msg{font-weight: 700; color: #e60012;}
+.anotation{font-size: 0.625rem; display: block;}
+.well{font-size: 0.8rem}
+
+/*==========  非モバイル・ファーストの場合  ==========*/
+
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	#res_text span {font-size: 2rem;}
+}
+
+/* XSサイズ : Extra Small Devices, Phones */  
+@media only screen and (max-width : 480px) {
+}
+
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (max-width : 320px) {
+}
