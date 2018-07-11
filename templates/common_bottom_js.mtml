@@ -10,9 +10,6 @@
 
 <mt:If name="FolderBasename" eq="web">
     $('.works').on('inview', function(event, isInView) {
-<mt:ElseIf name="FolderBasename" eq="movie">
-    $('.movie_sample').on('inview', function(event, isInView) {
-</mt:If>
         if( isInView ) {
             $(this).addClass('fadeIn');
             $(this).css('opacity',1);
@@ -22,4 +19,27 @@
             $(this).css('opacity',0);
         }
     });
+<mt:ElseIf name="FolderBasename" eq="pamphlet">
+    $('.works').on('inview', function(event, isInView) {
+         if( isInView ) {
+            $(this).addClass('fadeIn');
+            $(this).css('opacity',1);
+        }
+        else {
+            $(this).removeClass('fadeIn');
+            $(this).css('opacity',0);
+        }
+    });
+<mt:ElseIf name="FolderBasename" eq="movie">
+    $('.movie_sample').on('inview', function(event, isInView) {
+        if( isInView ) {
+            $(this).addClass('fadeIn');
+            $(this).css('opacity',1);
+        }
+        else {
+            $(this).removeClass('fadeIn');
+            $(this).css('opacity',0);
+        }
+    });
+</mt:If>
 </script>

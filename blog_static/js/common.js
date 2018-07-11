@@ -353,13 +353,13 @@ function initialize() {
     map.setMapTypeId('actvision');
 
     var icon = {
-        url : '/company/images/marker55.png',
+        url : '/images/company/marker55.png',
         scaledSize : new google.maps.Size(55, 72),
         // ↑ここで画像のサイズを指定
     }
 
     var icon2 = {
-        url : '/company/images/markerp55.png',
+        url : '/images/company/markerp55.png',
         scaledSize : new google.maps.Size(55, 72),
         // ↑ここで画像のサイズを指定
     }
@@ -372,7 +372,7 @@ function initialize() {
 
     // 情報ウィンドウのインスタンスを作成
     var infoWindow2 = new google.maps.InfoWindow( {
-        content: 'お客さま駐車場<br>入口向かって右側、<br>手前から２つ目のスペースにご駐車ください。<br><a href="/company/images/access.pdf" target="_blank">詳細はこちらをクリック</a>' ,
+        content: 'お客さま駐車場<br>入口向かって右側、<br>手前から２つ目のスペースにご駐車ください。<br><a href="/images/company/access.pdf" target="_blank">詳細はこちらをクリック</a>' ,
         position: latlng2 ,
     } ) ;
 

@@ -33,9 +33,16 @@
 <link rel="stylesheet" href="<$mt:BlogURL$>css/web.css">
 <mt:ElseIf name="FolderBasename" eq="movie">
 <link rel="stylesheet" href="<$mt:BlogURL$>css/movie.css">
+<mt:ElseIf name="FolderBasename" eq="pamphlet">
+<link rel="stylesheet" href="<$mt:BlogURL$>css/pamphlet.css">
+<mt:ElseIf name="FolderBasename" eq="company">
+<link rel="stylesheet" href="<$mt:BlogURL$>css/company.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1uvgnEXRTm8ZrzFh8RwFB4N3VMerqceA"></script>
+<script type="text/javascript">window.onload = function () {initialize();}</script>
+<mt:ElseIf name="FolderBasename" eq="inquiry">
+<link rel="stylesheet" href="<$mt:BlogURL$>css/inquiry.css">
 </mt:If>
 </head>
-
 <body>
 <$mt:Include module="header"$>
 <$mt:Include module="breadcrumbs"$>

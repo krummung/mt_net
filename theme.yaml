@@ -1,18 +1,20 @@
-id: "basic"
-label: "basic"
+id: "act180711"
+label: "act180711"
 version: "1.0.0"
 author_link: "https://actvision.movabletype.io/"
 author_name: "動画（映像）・Web（ホームページ）・印刷物の制作会社｜アクトビジョン（つくば市）"
-description: "basic"
+description: "act180711"
 class: "blog"
 elements:
   blog_static_files:
     component: ~
     data:
+      - blog_static
       - bootstrap
       - css
       - images
       - js
+      - templates
     importer: blog_static_files
   custom_fields:
     component: commercial
