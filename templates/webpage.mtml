@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title><$mt:PageTitle encode_html="1"$> | <$mt:BlogName encode_html="1"$></title>
-<meta name="description" content="<$mt:BlogName encode_html="1"$> <$mt:PageTitle encode_html="1"$>">
+<meta name="description" content="<$mt:PageExcerpt remove_html="1" encode_html="1"$>">
 <meta name="keywords" content="<$mt:GetVar name="meta_keywords" encode_html="1"$>,<$mt:PageTitle encode_html="1"$>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><$mt:Var name="blog_lang"$></mt:If>">
 <meta property="og:title" content="<$mt:PageTitle encode_html="1"$> | <$mt:BlogName encode_html="1"$>">
 <meta property="og:url" content="<$mt:PagePermalink encode_html="1"$>">
-<meta property="og:description" content="<$mt:BlogName encode_html="1"$> <$mt:PageTitle encode_html="1"$>">
+<meta property="og:description" content="<$mt:PageExcerpt remove_html="1" encode_html="1"$>">
 <meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
 <meta property="og:image" content="<$mt:BlogURL encode_html="1"$>images/ogimage.jpg">
 <meta name="twitter:card" content="summary_large_image">
